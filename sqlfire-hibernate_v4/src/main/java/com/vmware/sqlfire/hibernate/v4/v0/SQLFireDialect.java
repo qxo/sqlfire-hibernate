@@ -156,7 +156,7 @@ public class SQLFireDialect extends com.vmware.sqlfire.hibernate.SQLFireDialectB
                                                                 sqlException, sql);
                                         }
                                 }
-                                return null;
+                               return new JDBCException(message, sqlException, sql);
                         }
                 };
         }

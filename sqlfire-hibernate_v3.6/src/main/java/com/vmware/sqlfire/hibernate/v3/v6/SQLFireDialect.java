@@ -138,7 +138,7 @@ public class SQLFireDialect extends  com.vmware.sqlfire.hibernate.SQLFireDialect
                   return new LockAcquisitionException(message, sqlException, sql);
                 }
               }
-              return null;
+              return new JDBCException(message, sqlException, sql);
             }
           };
         }

@@ -92,6 +92,10 @@ public abstract class SQLFireDialectBase extends DB2Dialect {
     return " for update";
   }
 
+  public boolean supportsVariableLimit() {
+    return false;
+  }
+  
   @Override
   public String getLimitString(String query, final int offset, final int limit) {
     // Get position of With
